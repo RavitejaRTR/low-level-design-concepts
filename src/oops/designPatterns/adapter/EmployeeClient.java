@@ -25,10 +25,14 @@ public class EmployeeClient {
 		
 		//We have to add the data of all the employees to the employees list
 		//But it only accepts objects of type Employee
-		
-		
+
+		Employee employeeAdapterCSV = new EmployeeAdapterCSV(employeeFromCSV);
+		Employee employeeAdapterLdap = new EmployeeAdapterLdap(employeeFromLdap);
+
+		employees.add(employeeFromDB);
+		employees.add(employeeAdapterCSV);
+		employees.add(employeeAdapterLdap);
 		return employees;
-		
 	}
 	
 }
