@@ -1,6 +1,7 @@
 package oops.designPatterns.factory;
 
 import oops.designPatterns.factory.websites.Blog;
+import oops.designPatterns.factory.websites.Shop;
 import oops.designPatterns.factory.websites.Website;
 
 public class FactoryDemo {
@@ -10,9 +11,9 @@ public class FactoryDemo {
 		
 		System.out.println(site.getPages());
 		
-		//site = WebsiteFactory.getWebsite(WebsiteType.SHOP);
+		Shop shopSite = (Shop) WebsiteFactory.getWebsite(WebsiteType.SHOP);
 		
-		System.out.println(site.getPages());
+		System.out.println(shopSite.getPages());
 	}
 
 }
